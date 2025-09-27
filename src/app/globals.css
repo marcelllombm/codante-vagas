@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap");
+
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -41,6 +43,9 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
+@theme {
+  --font-display: "Maven Pro", cursive;
+}
 :root {
   --radius: 0.625rem;
   --background: oklch(1 0 0);
