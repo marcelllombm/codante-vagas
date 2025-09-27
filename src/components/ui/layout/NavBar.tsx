@@ -4,7 +4,7 @@ import { buttonVariants } from "../button";
 
 export default function Nav() {
   return (
-    <nav className="mx-auto flex max-w-5xl items-center justify-between py-6">
+    <nav className="mx-auto flex w-full max-w-5xl items-center justify-between py-6">
       <Logo className="" />
 
       <ul className="flex items-center gap-6">
