@@ -1,6 +1,6 @@
-import Logo from "@/components/ui/layout/Logo";
+import Logo from "@/components/layout/Logo";
 import { cn } from "@/lib/utils";
-import { buttonVariants } from "../button";
+import { buttonVariants } from "../ui/button";
 
 export default function Nav() {
   return (
