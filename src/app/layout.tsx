@@ -2,6 +2,13 @@ import type { Metadata } from "next";
 import NavBar from "@/components/layout/NavBar";
 import "./globals.css";
 import Footer from "@/components/layout/Footer";
+import { Maven_Pro } from "next/font/google";
+
+const mavenPro = Maven_Pro({
+  weight: "variable",
+  subsets: ["latin"],
+  variable: "--font-maven-pro",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -14,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-BR">
+    <html lang="pt-BR" className={mavenPro.variable}>
       <body>
         <div className="flex min-h-screen flex-col">
           <NavBar />
