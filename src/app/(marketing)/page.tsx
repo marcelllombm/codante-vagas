@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <section className="pb-10 text-center">
-      <h1 className="font-display mx-auto w-xl text-5xl font-black">
+      <h1 className="font-divertida mx-auto w-xl text-5xl font-black">
         Diga adeus às longas buscas para uma vaga
       </h1>
       <Link

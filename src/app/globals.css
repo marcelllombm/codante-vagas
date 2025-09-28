@@ -43,6 +43,7 @@
 
 @theme {
   --font-display: var(--font-maven-pro), cursive;
+  --font-divertida: var(--font-barriecito), cursive;
 }
 :root {
   --radius: 0.625rem;
