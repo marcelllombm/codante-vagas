@@ -1,5 +1,6 @@
-import { Button, buttonVariants } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 export default function Notfound() {
   return (
@@ -15,12 +16,12 @@ export default function Notfound() {
       <p className="text-3xl font-light text-gray-500">
         Não foi possivel encontrar a página solicitada.
       </p>
-      <a
+      <Link
         href="/"
         className={cn(buttonVariants({ variant: "default" }), "mt-6")}
       >
         Voltar ao Home
-      </a>
+      </Link>
     </main>
   );
 }

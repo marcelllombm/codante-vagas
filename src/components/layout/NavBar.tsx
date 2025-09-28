@@ -1,6 +1,7 @@
 import Logo from "@/components/layout/Logo";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "../ui/button";
+import Link from "next/link";
 
 export default function Nav() {
   return (
@@ -8,21 +9,21 @@ export default function Nav() {
       <Logo className="" />
 
       <ul className="flex items-center gap-6">
-        <a href="/" className={cn(buttonVariants({ variant: "link" }))}>
+        <Link href="/" className={cn(buttonVariants({ variant: "link" }))}>
           Home
-        </a>
-        <a href="/sobre" className={cn(buttonVariants({ variant: "link" }))}>
+        </Link>
+        <Link href="/sobre" className={cn(buttonVariants({ variant: "link" }))}>
           Sobre
-        </a>
-        <a href="/vagas" className={cn(buttonVariants({ variant: "link" }))}>
+        </Link>
+        <Link href="/vagas" className={cn(buttonVariants({ variant: "link" }))}>
           Vagas
-        </a>
-        <a
+        </Link>
+        <Link
           href="/vagas/cadastro"
           className={cn(buttonVariants({ variant: "link" }))}
         >
           Cadastrar vagas
-        </a>
+        </Link>
       </ul>
     </nav>
   );
