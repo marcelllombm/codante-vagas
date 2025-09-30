@@ -9,7 +9,11 @@ export default function Nav() {
       <Logo className="" />
 
       <ul className="flex items-center gap-6">
-        <Link href="/" className={cn(buttonVariants({ variant: "link" }))}>
+        <Link
+          href="/"
+          prefetch
+          className={cn(buttonVariants({ variant: "link" }))}
+        >
           Home
         </Link>
         <Link href="/sobre" className={cn(buttonVariants({ variant: "link" }))}>

@@ -1,6 +1,8 @@
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 import Link from "next/link";
+import astronalt from "@/assests/images/astrounalt.png";
 
 export default function Notfound() {
   return (
@@ -8,9 +10,9 @@ export default function Notfound() {
       <h1 className="font-display text-5xl font-bold text-gray-500">
         Nada encontrado aqui
       </h1>
-      <img
+      <Image
         className="mx-auto mt-10 w-xs"
-        src="/astrounalt.png"
+        src={astronalt}
         alt="Image de um barco afundando"
       />
       <p className="text-3xl font-light text-gray-500">
