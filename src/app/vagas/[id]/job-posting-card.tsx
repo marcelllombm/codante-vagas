@@ -1,3 +1,4 @@
+"use client";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
@@ -5,6 +6,8 @@ import { Separator } from "@/components/ui/separator";
 import { Briefcase, DollarSign, MapPin, Users } from "lucide-react";
 import Link from "next/link";
 import { Job } from "@/lib/types";
+import { deleteJob } from "@/lib/actions";
+import { Input } from "@/components/ui/input";
 
 export default function JobPostingCard({ job }: { job: Job }) {
   return (
@@ -23,7 +26,10 @@ export default function JobPostingCard({ job }: { job: Job }) {
               </Link>
             </p>
           </div>
-          <Button variant="destructive">Apagar Vaga</Button>
+          <form action={deleteJob}>
+            <Input type="hidden" name="id" value={job.id} />
+            <Button variant="destructive">Apagar Vaga</Button>
+          </form>
         </div>
       </CardHeader>
 
