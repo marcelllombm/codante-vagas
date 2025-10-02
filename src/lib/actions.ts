@@ -12,7 +12,22 @@ export async function deleteJob(formData: FormData) {
   );
 
   if (!res.ok) {
-    throw new Error("algo deu errado ao apagar a vaga");
+    throw new Error("Erro ao deletar vaga");
   }
+  redirect("/vagas");
+}
+
+export async function createJob(formData: FormData) {
+  const res = await fetch("https://apis.codante.io/api/job-board/jobs", {
+    method: "POST",
+    body: formData,
+  });
+
+  if (!res.ok) {
+    throw new Error(
+      `Erro ao inserir nova vaga ${res.status} - ${res.statusText} - ${await res.text()}`,
+    );
+  }
+
   redirect("/vagas");
 }
