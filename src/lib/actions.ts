@@ -17,16 +17,20 @@ export async function deleteJob(formData: FormData) {
   redirect("/vagas");
 }
 
-export async function createJob(formData: FormData) {
+export async function createJob(prevState: any, formData: FormData) {
   const res = await fetch("https://apis.codante.io/api/job-board/jobs", {
     method: "POST",
     body: formData,
   });
 
   if (!res.ok) {
-    throw new Error(
-      `Erro ao inserir nova vaga ${res.status} - ${res.statusText} - ${await res.text()}`,
-    );
+    // throw new Error(
+    //   `Erro ao inserir nova vaga ${res.status} - ${res.statusText} - ${await res.text()}`,
+    // );
+    return {
+      error: true,
+      message: (await res.json()).message,
+    };
   }
 
   redirect("/vagas");
